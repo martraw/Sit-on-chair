@@ -103,12 +103,28 @@ header{
 }
 
 .about-section-box {
-	width: 45%;
-	/*float: left;*/
+	width: 40%;
+	float: left;
 	/*border: 1px solid red;*/
 	margin: 45px 0 64px 0;
 	display: inline-block;
 	vertical-align: top;
+}
+
+.black-chair{
+	position: relative;
+	left: calc(50% - 240px);
+}
+
+.arrow-box{
+	float: left;
+	width: 10%;
+	padding-top: 200px;
+}
+
+.arrow{
+	font-size: 65px;
+	color: #2BCBAC;
 }
 
 .container {
