@@ -78,10 +78,43 @@ header{
 	float: right;
 }
 
+
 #header-nav li{
 	display: inline-block;
 	list-style: none;
-	padding-left: 15px;
+	/*padding-left: 15px;*/
+}
+
+#header-nav a{
+	color: white;
+	text-decoration: none;
+	padding: 15px 15px;
+
+}
+
+.dropdown-menu-content{
+	display: none;
+	position: absolute;
+	top: 60px;
+	z-index: 1;
+	background-color: black;
+	color: white;
+}
+
+.dropdown-menu-content::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+    transform: translateX(-50%);
+}
+
+#header-nav .dropdown-menu-content li{
+	display: block;
+	padding: 10px 15px;
 }
 
 /*About section styles*/
