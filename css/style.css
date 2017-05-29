@@ -144,10 +144,10 @@ header{
 	vertical-align: top;
 }
 
-.black-chair{
+/*.black-chair{
 	position: relative;
 	left: calc(50% - 240px);
-}
+}*/
 
 .arrow-box{
 	float: left;
@@ -159,6 +159,21 @@ header{
 	font-size: 65px;
 	color: #2BCBAC;
 }
+
+/*slider*/
+
+.slider {
+    list-style: none;
+}
+
+.slider li{
+    display: none;
+}
+
+.slider .visible{
+    display: inline-block;
+}
+
 
 .container {
 	text-align: center;

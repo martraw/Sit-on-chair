@@ -3,7 +3,15 @@ var productBox = document.querySelectorAll(".products-box");
 var transparent = document.querySelectorAll(".transparent");
 var dropdownMenu = document.querySelector(".dropdown-menu");
 var dropdownMenuContent = document.querySelector(".dropdown-menu-content");
-console.log(transparent);
+var images = document.querySelector(".slider").children;
+var arrows = document.querySelectorAll(".arrow-box");
+var next = arrows[0];
+var prev = arrows[1];
+var imgIndex = 0;
+
+console.log(images);
+
+
 
 for (var i = 0; i < productBox.length -1; i++) {
   productBox[i].addEventListener("mouseover", function(){
@@ -19,6 +27,35 @@ dropdownMenu.addEventListener("mouseover", function(){
 });
 dropdownMenu.addEventListener("mouseout", function(){
   dropdownMenuContent.style.display = "none";
+});
+
+
+images[0].classList.add("visible");
+
+next.addEventListener("click", function() {
+  images[imgIndex].classList.remove("visible");
+  imgIndex++;
+
+  if (imgIndex < images.length) {
+    images[imgIndex].classList.add("visible");
+
+  } else {
+    imgIndex = 0;
+    images[imgIndex].classList.add("visible");
+  }
+
+});
+
+prev.addEventListener("click", function() {
+  images[imgIndex].classList.remove("visible");
+  imgIndex--;
+
+  if (imgIndex == -1) {
+    imgIndex = images.length - 1;
+    images[imgIndex].classList.add("visible");
+  } else if (imgIndex >= 0) {
+    images[imgIndex].classList.add("visible");
+  }
 });
 
 
