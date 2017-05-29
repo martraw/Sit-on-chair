@@ -158,6 +158,7 @@ header{
 .arrow{
 	font-size: 65px;
 	color: #2BCBAC;
+	cursor: pointer;;
 }
 
 /*slider*/
