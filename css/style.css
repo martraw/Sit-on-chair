@@ -682,22 +682,22 @@ footer{
 }
 .panel_left {
   display: inline-block;
-  width: 185px;
+  width: 63%;
   vertical-align: top;
   padding-bottom:10px;
   border-bottom:1px solid #e7e7e7;
-  height: 135px;
+  height: 145px;
 }
 
 .panel_right {
   display: inline-block;
-  width: 100px;
+  width: 35%;
   border-left:1px solid #e7e7e7;
   text-align: right;
   vertical-align: top;
   padding-bottom:10px;
   border-bottom:1px solid #e7e7e7;
-  height: 135px;
+  height: 145px;
 }
 
 .panel_left h4 , .panel_right h4{
