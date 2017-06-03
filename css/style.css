@@ -751,7 +751,7 @@ footer{
 .list_panel {
   background-color: white;
   border: 1px solid #ccc;
-  width: 288px;
+  width: 278px;
   padding-left: 15px;
   padding-bottom: 10px;
   list-style: none;
@@ -759,7 +759,7 @@ footer{
   left: 0px;
   z-index: 2;
   position: absolute;
-  top: 54px;
+  top: 38px;
   display:none;
 }
 .list_panel li {
@@ -770,4 +770,7 @@ footer{
 
 .title {
   height: 30px;
+}
+.visible{
+	display: block;
 }

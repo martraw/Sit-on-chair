@@ -8,8 +8,7 @@ var next = arrows[0];
 var prev = arrows[1];
 var imgIndex = 0;
 
-console.log(images);
-
+// console.log(images);
 
 
 for (var i = 0; i < productBox.length -1; i++) {
@@ -57,6 +56,21 @@ prev.addEventListener("click", function() {
   }
 });
 
+
+//---------------- Calculator------------------
+
+var dropdownArrow = document.querySelectorAll(".list_arrow");
+var list_model = document.querySelectorAll(".list_panel")[0];
+var list_colors = document.querySelectorAll(".list_panel")[1];
+var list_material = document.querySelectorAll(".list_panel")[2];
+
+console.log(list_model);
+
+for (var i = 0; i < dropdownArrow.length; i++) {
+  dropdownArrow[i].addEventListener("click", function(){
+    this.nextElementSibling.classList.toggle("visible");
+  })
+}
 
 
 });//Koniec
