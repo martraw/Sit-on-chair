@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(){
 var productBox = document.querySelectorAll(".products-box");
-var transparent = document.querySelectorAll(".transparent");
 var dropdownMenu = document.querySelector(".dropdown-menu");
 var dropdownMenuContent = document.querySelector(".dropdown-menu-content");
 var images = document.querySelector(".slider").children;
