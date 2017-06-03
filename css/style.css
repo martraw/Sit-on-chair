@@ -578,7 +578,7 @@ footer{
 
 .list_label {
   font-size: 20px;
-  color: #e2e2e2;
+  color: #939393;
   font-family: 'ralewaylight', Arial, Tahoma, sans-serif;
 }
 
@@ -676,9 +676,10 @@ footer{
   display: inline-block;
   font-family: 'ralewaymedium', Arial, Tahoma, sans-serif;
   margin-top: 20px;
-  margin-left: 29px;
+  margin-left: 78px;
   border-radius: 8px;
   text-decoration: none;
+	cursor: pointer;
 }
 .panel_left {
   display: inline-block;
@@ -720,7 +721,7 @@ footer{
 }
 .sum_label{
   display: inline-block;
-  width: 185px;
+  width: 65%;
   margin-top: 10px;
   font-size: 22px;
   color: #5b5a5a;
@@ -728,11 +729,15 @@ footer{
 
 .sum {
   display: inline-block;
-  width: 100px;
+  width: 33%;
   text-align: right;
   margin-top: 10px;
   font-size: 22px;
   color: #24baa0;
+}
+
+.sum strong {
+	padding-left: 20px;
 }
 
 .list_arrow {
@@ -740,11 +745,11 @@ footer{
   height: 0;
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
-  border-top: 15px solid #24baa0;
+  border-top: 22px solid #24baa0;
   display:block;
   position: absolute;
   right: 14px;
-  top: 14px;
+  top: 8px;
   cursor: pointer;
 }
 

@@ -64,6 +64,7 @@ var list_model = document.querySelectorAll(".list_panel")[0];
 var list_colors = document.querySelectorAll(".list_panel")[1];
 var list_material = document.querySelectorAll(".list_panel")[2];
 var transportTickBox = document.querySelector("#transport");
+var priceElements = document.querySelector(".panel_right");
 
 console.log(list_model.children[1]);
 
@@ -73,26 +74,6 @@ for (var i = 0; i < dropdownArrow.length; i++) {
   });
 }
 
-// for (var i = 0; i < list_model.children.length; i++) {
-//   list_model.children[i].addEventListener("click", function(){
-//     document.querySelector(".panel_left").children[0].innerHTML = "Chair " + this.innerHTML;
-//
-//     document.querySelector(".panel_right").children[0].innerHTML =  this.dataset.price + " zł";
-//
-//     this.parentNode.classList.toggle("visible");
-//   });
-// }
-// //
-// for (var i = 0; i < list_colors.children.length; i++) {
-//   list_colors.children[i].addEventListener("click", function(){
-//     document.querySelector(".summary_panel.inline .panel_left").children[1].innerHTML = this.innerHTML;
-//
-//     document.querySelector(".summary_panel.inline .panel_right").children[1].innerHTML =  this.dataset.price + " zł";
-//
-//     this.parentNode.classList.toggle("visible");
-//   });
-// }
-
 var selection = function(list, destination){
 
   for (var i = 0; i < list.children.length; i++) {
@@ -101,19 +82,35 @@ var selection = function(list, destination){
 
       document.querySelector(".panel_right " + "."+destination+"").innerHTML = this.dataset.price + " zł";
       this.parentNode.classList.toggle("visible");
-
-      console.log(document.querySelector("#transport").checked);
-      if (transportTickBox.checked) {
-        document.querySelector(".panel_left .transport").innerHTML = "Transport";
-
-        document.querySelector(".panel_right .transport").innerHTML = transportTickBox.dataset.transportPrice + " zł";
-      }
+      sumUp();
     });
-
   }
+};
+
+transportTickBox.addEventListener("click", function(){
+  if (!transportTickBox.checked) {
+    document.querySelector(".panel_left .transport").innerHTML = "Odbiór osobisty";
+
+    document.querySelector(".panel_right .transport").innerHTML = "0 zł";
+  } else {
+    document.querySelector(".panel_left .transport").innerHTML = "Transport";
+
+    document.querySelector(".panel_right .transport").innerHTML = transportTickBox.dataset.transportPrice + " zł";
+  }
+  sumUp();
+});
+
+var sumUp = function(){
+  var totalPrice = 0;
+  for (var i = 0; i < priceElements.children.length; i++) {
+    if (priceElements.children[i].innerHTML !== "") {
+      totalPrice += parseInt(priceElements.children[i].innerHTML);
+    }
+  }
+  document.querySelector(".sum strong").innerHTML = totalPrice + " zł";
 };
 
 selection(list_model, "title");
 selection(list_colors, "color");
-selection(list_material, "pattern");
+selection(list_material, "fabric");
 });//Koniec
